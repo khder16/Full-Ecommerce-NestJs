@@ -1,85 +1,69 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# E-commerce Platform with NestJS, PostgreSQL, and TypeORM
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to the E-commerce Platform, an advanced, feature-rich application built using the NestJS framework, PostgreSQL as the database, and TypeORM for database interactions. This project aims to provide a robust foundation for developing a scalable and maintainable e-commerce solution.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Features
+- **User Authentication & Authorization**: Secure login and signup using JWT, role-based access control.
+- **Product Management**: Add, update, delete, and view products.
+- **Order Management**: Place orders, view order history, and manage order statuses.
+- **Category Management**: Create and manage product categories.
+- **File Uploads**: Upload multiple product images to Cloudinary.
+- **Sales Reports**: Generate sales reports within specific date ranges.
+- **Robust Error Handling**: Comprehensive error handling and logging for all endpoints.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Tech Stack
+- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **PostgreSQL**: A powerful, open-source relational database system.
+- **TypeORM**: An ORM for TypeScript and JavaScript (ES7, ES6, ES5) based on DataMapper, Unit of Work, and Active Record patterns.
+- **Cloudinary**: Cloud-based image and video management solution.
 
-## Project setup
+## Getting Started
 
-```bash
-$ npm install
-```
+### Prerequisites
+- **Node.js**: Ensure you have Node.js installed (version 14 or higher).
+- **PostgreSQL**: Install PostgreSQL and create a database.
+- **Cloudinary Account**: Sign up for a Cloudinary account and get your API credentials.
 
-## Compile and run the project
+### Installation
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/khder16/Full-Ecommerce-NestJs.git
+    cd ecommerce-nestjs
+    ```
 
-```bash
-# development
-$ npm run start
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-# watch mode
-$ npm run start:dev
+3. **Environment Variables**:
+   Create a `.env` file in the root directory and add the following environment variables:
+    ```env
+    DATABASE_HOST=localhost
+    DATABASE_PORT=5432
+    DATABASE_USER=yourusername
+    DATABASE_PASSWORD=yourpassword
+    DATABASE_NAME=ecommerce
 
-# production mode
-$ npm run start:prod
-```
+    CLOUDINARY_NAME=your_cloudinary_name
+    CLOUDINARY_API_KEY=your_cloudinary_api_key
+    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+    ```
 
-## Run tests
+### Running the Application
+1. **Run Database Migrations**:
+    ```bash
+    npm run typeorm:migration:run
+    ```
 
-```bash
-# unit tests
-$ npm run test
+2. **Start the Application**:
+    ```bash
+    npm run start:dev
+    ```
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+## Usage
+- **Access the API**:
+  - The application will be running at `http://localhost:3000`.
+- **Swagger Documentation**:
+  - Access API documentation at `http://localhost:3000/api`.
